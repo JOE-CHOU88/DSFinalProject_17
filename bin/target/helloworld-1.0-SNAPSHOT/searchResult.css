@@ -1,0 +1,343 @@
+@charset "BIG5";
+/*=============================================
+=                  General                    =
+=============================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+	color: #094e3d;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 0px;
+    font-family: 'Microsoft Jhenghei';
+}
+
+/*============ index.html ============*/
+.title{
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight:bold;
+}
+
+.subtitle{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    /* !圖片無法置中?? */
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.topbar{
+    /* !33%不能縮放到最小 */
+    width: 32%; 
+    display: block;
+    text-align: center;
+}
+
+.img-topbar {
+    width: 100%;
+    height:5px;
+}
+
+/*===== menu bar =====*/
+.menubar{
+    /* background-color: rgba(255, 242, 175, 0.404); */
+    /* 切換成半個頁面的時候，menubar會有問題 */
+    text-align: center;
+}
+.menubar ul{
+    display:inline-flex;
+    display: flex;
+    /* 將menubar有彈性的撐開 */
+    list-style: none;
+    /* 每一行間前面要不要有圓圈或正方形 */
+    color:black;
+}
+
+/*=============================================
+=                  Intro                      =
+=============================================*/
+.intro-box {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: all .5s ease-out;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.intro-box:hover {
+    background: white;
+    box-shadow: 0px 22px 22px rgba(0,0,0,.25);
+}
+
+.intro-line {
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px auto;
+    transition: all .5s ease;
+    color: rgb(151, 151, 255);
+}
+
+.intro-box:hover .intro-line {
+    width: 40px;
+}
+
+.icon-chinese, .icon-japanese, .icon-english, .icon-dance {
+    font-size: 80px;
+}
+
+.left-card {
+    width: 500px;
+    justify-content: left;
+}
+
+.right-card {
+    width: 500px;
+}
+
+.search-bar {
+    margin-top: 25px;
+    width:87%;
+    height:18px;
+}
+
+.search-btn {
+    margin-top: 30px;
+    width:10%;
+    height:18px;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*===== buttom bar =====*/
+.img-buttombar{
+    margin-top:10px;
+    margin-bottom: 10px;
+    width: 20%;
+    height:5px;
+}
+
+.buttombar-list{
+    margin-top: 20px;
+    display: flex;
+    padding: 20px;
+}
+
+
+.select-card-list {
+    
+}
+
+.select-card {
+    width: 32%;
+}
+
+
+
+/*=============================================
+=                  Features                   =
+=============================================*/
+.work-box {
+    border-radius: 25px;
+    margin-bottom: 15px;
+    transition: all .3s ease-in;
+    padding: 15px 15px;
+    text-align: center;
+    border-style:solid;
+    border-color: lightgoldenrodyellow;
+}
+
+.work-box:hover {
+    background:lightgoldenrodyellow;
+    box-shadow: 0px 22px 22px rgba(0,0,0,.25);
+}
+
+.work-box:hover {
+    /* width: 40px; */
+}
+
+p {
+    color: #094e20;
+    text-align: left;
+}
+
+.title-name {
+    text-align: left;
+}
+
+.record-date {
+    /* text-align: right; */
+}
+
+/*=============================================
+=                  Gallery                    =
+=============================================*/
+
+/* TODO: 設定Hover特效 */
+
+[id^='galleryImage'] {
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']>.gallery-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']:hover {
+    filter: grayscale(0%);
+}
+
+[id^='galleryImage']:hover>.gallery-text {
+    
+}
+
+/* 放入背景圖片 */
+
+#galleryImage1 {
+    background-image: url('../img/gallery-image-1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/gallery-image-2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/gallery-image-3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/gallery-image-4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/gallery-image-5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/gallery-image-6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/gallery-image-7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/gallery-image-8.jpg');
+}
+
+/*=============================================
+=                  Start Now                  =
+=============================================*/
+
+/*=============================================
+=                   Footer                    =
+=============================================*/
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
+
+#goBackBtn {
+    width: 40px;
+    height: 40px;
+    background-color: #094e3d;
+    border:none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+
+
+/*=============================================
+=                   AD-BOX                    =
+=============================================*/
+
+.ad-box {
+    width: 300px;
+    position: fixed;
+    right: -275px;
+    bottom: 80px;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.ad-box.active {
+    right: 0px;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+}
+
+.ad-toggle-btn {
+    width: 25px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.ad-toggle-btn>i {
+    transform: rotateZ(90deg);
+}
+
+.ad-toggle-btn:hover {
+    color: #666;
+}
+
+.right-part {
+    padding: 10px;
+}
+
+.right-part>p{
+    margin-bottom: 0;
+}
