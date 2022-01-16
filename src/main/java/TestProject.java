@@ -36,7 +36,7 @@ public class TestProject extends HttpServlet {
         try {
 	        String pwdJ = "C:\\Users\\Danny\\git\\Team17d\\DS_FinalProject2\\keyword.txt";
 		    String pwdL = "/Users/ashleylai/git/Team17/DS_FinalProject2/keyword.txt";
-			File file = new File("keyword.txt");		
+			File file = new File("../keyword.txt");		
 			Scanner scanner = new Scanner(file);
 			
 			System.out.println("Self-defined keyword list:");
