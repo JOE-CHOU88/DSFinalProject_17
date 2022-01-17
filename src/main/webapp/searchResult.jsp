@@ -42,7 +42,7 @@
         </div>
         <div class="card-list">
             <div class="left-card">
-                <h1 class="title"><a href='http://localhost:8080/DS_FinalProject2/TestProject'>舞松打狗</a></h1>
+                <h1 class="title"><a href='/TestProject'>舞松打狗</a></h1>
             </div>
             <div class="right-card">
                 <div class="select-card-list">
