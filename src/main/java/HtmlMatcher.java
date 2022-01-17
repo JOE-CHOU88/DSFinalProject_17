@@ -24,7 +24,7 @@ public class HtmlMatcher {
 		//System.out.println("1Hey!!!!!!!!!!!!!!!");
 		URLConnection conn = url.openConnection();
 		//System.out.println("2Hey!!!!!!!!!!!!!!!");
-		conn.setConnectTimeout(3000); //test if it takes too long to link
+		conn.setConnectTimeout(2000); //test if it takes too long to link
 		InputStream in = conn.getInputStream();
 		//System.out.println("3Hey!!!!!!!!!!!!!!!");
 		BufferedReader br = new BufferedReader(new InputStreamReader(in));
@@ -33,7 +33,7 @@ public class HtmlMatcher {
 	
 		String line = null;
 		long startTime = System.currentTimeMillis() / 1000;
-		long endTime   = startTime + 10;
+		long endTime   = startTime + 3;
 		while((line=br.readLine())!=null)
 		{
 			retVal += line;
@@ -229,7 +229,7 @@ public class HtmlMatcher {
     		URL urlObj = new URL(address);
     		HttpURLConnection oc = (HttpURLConnection) urlObj.openConnection();
     		oc.setUseCaches(false);
-    		oc.setConnectTimeout(3000); // 設定超時時間
+    		oc.setConnectTimeout(2000); // 設定超時時間
     		status = oc.getResponseCode();// 請求狀態
     		if (200 == status) {
     			// 200是請求地址順利連通。。
