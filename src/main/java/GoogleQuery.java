@@ -68,7 +68,7 @@ public class GoogleQuery
 		
 		//count the running time of fetching each web site. If too long, then stop
 		long startTime = System.currentTimeMillis() / 1000;
-		long endTime   = startTime + 10;
+		long endTime   = startTime + 3;
 		while((line=bufReader.readLine())!=null)
 		{
 			retVal += line;
