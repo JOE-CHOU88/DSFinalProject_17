@@ -199,11 +199,11 @@ public class TestProject extends HttpServlet {
 //		webList.output();
 //		System.out.println(webList.size());
 		
-		String[][] sortedWebList = new String[9][5]; //webList.getLst().size()
+		String[][] sortedWebList = new String[6][5]; //webList.getLst().size()
 		request.setAttribute("sortedWebList", sortedWebList);
 		int count=0;
 		int maxSizeOfTitle=20;//webList.getLst().size()-1
-		for(int j=webList.getLst().size()-1;j>=webList.getLst().size()-1-8;j--) {
+		for(int j=webList.getLst().size()-1;j>=webList.getLst().size()-1-5;j--) {
 			System.out.println("========="+(count+1)+"=============");
 			if(webList.getLst().get(j).root.webPage.name.length() > maxSizeOfTitle) {
 				sortedWebList[count][0] = webList.getLst().get(j).root.webPage.name.substring(0,maxSizeOfTitle) + "...";
