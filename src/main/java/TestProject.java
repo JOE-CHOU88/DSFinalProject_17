@@ -75,7 +75,7 @@ public class TestProject extends HttpServlet {
 		
 		//@SuppressWarnings("deprecation")
 		//System.out.println("1<--------->");
-		String keyword = new String(request.getParameter("keyword")); //.replace(" ", "+")
+		String keyword = new String(request.getParameter("keyword").replace(" ", "+")); //.replace(" ", "+")
 		//System.out.println("User input keyword (encoded before): " + String.format("'%s'", keyword));
 		//keyword = URLEncoder.encode(keyword, "UTF-8"); //"+藝文中心+舞蹈演出+youtube"
 		//keyword = URLEncoder.encode(keyword, "UTF-8");
