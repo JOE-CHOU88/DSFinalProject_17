@@ -199,38 +199,41 @@ public class TestProject extends HttpServlet {
 //		webList.output();
 //		System.out.println(webList.size());
 		
-		String[][] sortedWebList = new String[6][5]; //webList.getLst().size()
-		request.setAttribute("sortedWebList", sortedWebList);
-		int count=0;
-		int maxSizeOfTitle=20;//webList.getLst().size()-1
-		for(int j=webList.getLst().size()-1;j>=webList.getLst().size()-1-5;j--) {
-			System.out.println("========="+(count+1)+"=============");
-			if(webList.getLst().get(j).root.webPage.name.length() > maxSizeOfTitle) {
-				sortedWebList[count][0] = webList.getLst().get(j).root.webPage.name.substring(0,maxSizeOfTitle) + "...";
+		try {
+			String[][] sortedWebList = new String[6][5]; //webList.getLst().size()
+			request.setAttribute("sortedWebList", sortedWebList);
+			int count=0;
+			int maxSizeOfTitle=20;//webList.getLst().size()-1
+			for(int j=webList.getLst().size()-1;j>=webList.getLst().size()-1-5;j--) {
+				System.out.println("========="+(count+1)+"=============");
+				if(webList.getLst().get(j).root.webPage.name.length() > maxSizeOfTitle) {
+					sortedWebList[count][0] = webList.getLst().get(j).root.webPage.name.substring(0,maxSizeOfTitle) + "...";
 
-			}else {
+				}else {
 
-				sortedWebList[count][0] = webList.getLst().get(j).root.webPage.name;
+					sortedWebList[count][0] = webList.getLst().get(j).root.webPage.name;
 
+				}
+				System.out.println(sortedWebList[count][0]);
+				sortedWebList[count][1] = webList.getLst().get(j).root.webPage.url;
+				System.out.println(sortedWebList[count][1]);
+				sortedWebList[count][2] = String.format("%.1f",webList.getLst().get(j).root.nodeScore);
+				//System.out.println("sublinkInfo:\n" + webList.getLst().get(j).eularPrintTree());
+				System.out.println("Each web total score: " + sortedWebList[count][2]);
+				sortedWebList[count][3] = webList.getLst().get(j).eularPrintTree();
+				sortedWebList[count][4] = webList.getLst().get(j).root.webPage.picUrl;
+				System.out.println("Each web pic url: " + sortedWebList[count][4]);
+
+				System.out.println();
+				count++;	
 			}
-			System.out.println(sortedWebList[count][0]);
-			sortedWebList[count][1] = webList.getLst().get(j).root.webPage.url;
-			System.out.println(sortedWebList[count][1]);
-			sortedWebList[count][2] = String.format("%.1f",webList.getLst().get(j).root.nodeScore);
-			//System.out.println("sublinkInfo:\n" + webList.getLst().get(j).eularPrintTree());
-			System.out.println("Each web total score: " + sortedWebList[count][2]);
-			sortedWebList[count][3] = webList.getLst().get(j).eularPrintTree();
-			sortedWebList[count][4] = webList.getLst().get(j).root.webPage.picUrl;
-			System.out.println("Each web pic url: " + sortedWebList[count][4]);
+		} catch (Exception e) {
 			
-			System.out.println();
-			count++;	
+		} finally {
+		
+			request.getRequestDispatcher("searchResult.jsp").forward(request, response); 
+			//System.out.println("test:");
 		}
-		
-		
-		request.getRequestDispatcher("searchResult.jsp").forward(request, response); 
-		//System.out.println("test:");
-
 		
 	}
 
